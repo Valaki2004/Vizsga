@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.vtg.MainControler">
+   <children>
+      <TableView fx:id="Table" prefHeight="265.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="113.0" text="Id" />
+          <TableColumn fx:id="ChefCol" prefWidth="87.0" text="Chefname" />
+            <TableColumn fx:id="DateCol" prefWidth="92.0" text="Date" />
+            <TableColumn fx:id="TypeCol" prefWidth="94.0" text="Type" />
+            <TableColumn fx:id="CurrencyCol" prefWidth="72.0" text="Currency" />
+            <TableColumn fx:id="CommentCol" prefWidth="141.0" text="Comment" />
+        </columns>
+      </TableView>
+      <Button layoutX="397.0" layoutY="361.0" mnemonicParsing="false" onAction="#AddBtn" prefHeight="63.0" prefWidth="172.0" text="Hozzáadás" />
+      <DatePicker fx:id="datefield" layoutX="95.0" layoutY="320.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="chefield" layoutX="95.0" layoutY="279.0" />
+      <ComboBox fx:id="categoryfield" layoutX="94.0" layoutY="361.0" prefWidth="150.0" />
+      <TextField fx:id="pricefield" layoutX="95.0" layoutY="393.0" />
+      <TextField fx:id="commentfield" layoutX="95.0" layoutY="452.0" prefHeight="63.0" prefWidth="487.0" />
+      <Button layoutX="397.0" layoutY="279.0" mnemonicParsing="false" onAction="#ExitBtn" prefHeight="63.0" prefWidth="172.0" text="Kilépés" />
+      <Text layoutX="23.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chef name:" />
+      <Text layoutX="40.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+      <Text layoutX="29.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category:" />
+      <Text layoutX="38.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+      <Text layoutX="26.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comment:" />
+   </children>
+</Pane>
