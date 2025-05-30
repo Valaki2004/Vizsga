@@ -1,7 +1,6 @@
 package hu.vtg;
 
 import java.io.IOException;
-import java.io.Reader;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -45,10 +44,12 @@ public class MainControler {
             ReaderandWriter readerandWriter = new ReaderandWriter();
             ArrayList<Model> list = readerandWriter.readFile();
             Model models = new Model();
+            String selectedCategory = categoryfield.getValue();
             int plusid = list.size() + 1;
             models.setId(plusid);
             models.setChefname(chefield.getText());
             models.setDatum(datefield.getValue());
+            models.setType(selectedCategory);
             models.setCurrency(Integer.parseInt(pricefield.getText()));
             models.setComment(commentfield.getText());
             list.add(models);
@@ -81,6 +82,7 @@ public class MainControler {
         this.CurrencyCol.setCellValueFactory(new PropertyValueFactory<>("currency"));
         this.CommentCol.setCellValueFactory(new PropertyValueFactory<>("comment"));
         this.Table.getItems().addAll(Models);
+        categoryfield.getItems().addAll("Travel", "Ingredients", "Accommodation", "Equipment", "Other");
     }
     @FXML
     private TextField chefield;
